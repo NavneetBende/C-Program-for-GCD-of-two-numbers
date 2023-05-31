@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+// Improved the time complexity in comparision to repeated subtraction
+// Done by efficient usage of modulo operator in euclidean algorithm
+int calcGCD(int a, int b)
+{
+    return b == 0 ? a : calcGCD(b, a % b);   
+}
+
+int main()
+{
+    int n1 = 45, n2 = 18;
+
+    int gcd = calcGCD(n1, n2);
+    
+    cout<<"The GCD is: "<<gcd;
+    
+    return 0;
+}
